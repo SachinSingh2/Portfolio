@@ -1,0 +1,22 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   
+}
+
+@keyframes dotAnimation {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply the animation to the dots */
+  .helping::after {
+    content: "...";
+    display: inline-block;
+    animation: dotAnimation 1.5s infinite; /* Adjust the duration as needed */
+  }

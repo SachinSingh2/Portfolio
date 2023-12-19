@@ -1,0 +1,11 @@
+*{
+    color: white;
+    background-color: black;
+}
+
+
+.ImageDiv img{
+    width: 100%
+    /* filter: grayscale(100%) brightness(200%); */
+}
+

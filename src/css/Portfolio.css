@@ -1,0 +1,70 @@
+  .PortfolioHr{
+    padding: 0px 40px;
+  }
+
+  .PortfolioHr hr{
+    border: solid white;
+    color: white !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (width < 1000px) {
+    .TechnologyBox{
+      display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+  @media (width > 1000px) {
+    .ProjectBoxInner {
+        position: relative;
+      }
+      
+      .TechnologyBox{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        height: 100%;
+        width: 100%;
+      }
+    
+      .ProjectBoxInner:hover .TechnologyBox {
+        width: 100%;
+        opacity: 0.7;
+        transition: opacity 0.5s ease-in-out;
+        height: 100%;
+      }
+
+
+      .ForSmallScreenDiv{
+        display: none;
+      }
+  }
+
+
+
+
+
+

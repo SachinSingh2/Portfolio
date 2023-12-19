@@ -1,0 +1,67 @@
+.MyNav{
+background-color: black !important;
+}
+
+
+
+
+.offcanvasdiv{
+    background-color: black;
+}
+
+.btn-close {
+    color: white !important;
+}
+
+.linkContainer ul{
+    list-style: none;
+    text-align: center;
+    background-color: black;
+}
+
+.linkContainer ul li a span{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 55px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.linkContainer ul li  :hover{
+    color: rgb(218, 15, 15) !important;
+}
+.linkContainer ul li  :active{
+    color: white !important;
+}
+
+/* Media query for smaller devices (e.g., screens less than 768px wide) */
+@media (max-width: 640px) {
+
+
+    .linkContainer ul{
+        list-style: none;
+        text-align: start;
+    }
+
+    .linkContainer ul li a span {
+        font-size: 40px; /* Adjust the font size for smaller devices */
+        font-weight: 500; /* Adjust the font weight for smaller devices if needed */
+    }
+}
+/* In this code, we've added a media query that targets screens with a maximum width of 768 pixels (you can adjust this value as needed). Inside the media query, we've adjusted the font size and font weight for the .linkContainer ul li a selector to make the text appear differently on smaller devices. You can customize the font size and font weight values to suit your design preferences for smaller screens. */
+
+
+@media (max-width: 300px) {
+
+
+    .linkContainer ul{
+        list-style: none;
+        text-align: start;
+    }
+
+    .linkContainer ul li a span {
+        font-size: 30px; /* Adjust the font size for smaller devices */
+        font-weight: 500; /* Adjust the font weight for smaller devices if needed */
+    }
+}
+
+

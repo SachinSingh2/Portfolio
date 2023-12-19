@@ -1,0 +1,110 @@
+.ContactDiv1,
+.ContactDiv2 {
+    color: white;
+}
+
+.ContactDiv1{
+    z-index: 101;
+}
+
+.StartProjectHeading h1 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Input Form */
+
+.FormBox {
+    margin-top: 50px;
+}
+.FormBox label{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* Input Form */
+.Input {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: black;
+    color: gray;
+    border: none;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.Input:focus {
+    outline: none;
+    border: none;
+    color: gray;
+}
+
+
+.sendIt{
+    border-radius: 3px;
+    background-color: black;
+    border: white 2px solid;
+    color: white;
+    padding: 10px 20px;
+  }
+  .sendIt:hover{
+    background-color: white;
+    color: black;
+    border: black 2px solid;
+  }
+
+/* Style for the navigation bar (assuming it has a class of .navbar) */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 103; /* Adjust the z-index as needed */
+    background-color: white; /* Set the background color as needed */
+}
+
+/* Style for the first div (assuming it has a class of .ContactDiv1) */
+/* Style for the first div (assuming it has a class of .ContactDiv1) */
+.ContactDiv1 {
+    color: white;
+    position: sticky;
+    top: 0;
+    left: 100%;
+    z-index: 101;
+}
+
+/* Style for the second div (assuming it has a class of .ContactDiv2) */
+.ContactDiv2 {
+    color: white;
+    z-index: 10;
+    left: 10;
+    background-color: black;
+    top: 60px; /* Adjust the top value to leave space for the sticky navigation bar */
+}
+
+
+/* Rest of your CSS styles... */
+
+@media (max-width: 767px) {
+
+    .ContactDiv1 {
+        color: white;
+        position: sticky;
+        top: 0;
+        left: 100%;
+        z-index: 10;
+    }
+    
+    /* Style for the second div (assuming it has a class of .ContactDiv2) */
+    .ContactDiv2 {
+        color: white;
+        z-index: 102;
+        text-align: center;
+        position: static;
+        top: 60px; /* Adjust the top value to leave space for the sticky navigation bar */
+    }
+}
+
+
+
+
+
+
