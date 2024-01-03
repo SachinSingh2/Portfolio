@@ -52,7 +52,7 @@
     
       .ProjectBoxInner:hover .TechnologyBox {
         width: 100%;
-        opacity: 0.7;
+        opacity: 1;
         transition: opacity 0.5s ease-in-out;
         height: 100%;
       }

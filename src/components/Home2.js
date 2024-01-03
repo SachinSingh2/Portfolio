@@ -2,28 +2,10 @@ import React  from 'react';
 import '../css/Home2.css';
 import Main from '../images/main2.png';
 import { Link } from 'react-router-dom';
+import pdf from '../Files/Resume.pdf'
 import { useTypewriter , Cursor } from 'react-simple-typewriter';
 
 export default function Home2() {
-
-  const pngUrl = 'http://localhost:3000/cv.pdf'
-  const handleForResume = (url)=>{
-
-    fetch(url).then((res)=>{
-      res.blob()
-    }).then((blob)=>{
-      const blobUrl = window.URL.createObjectURL(new Blob([blob]))
-    const filename = url.split("/").pop()
-    const aTag = document.createElement("a")
-    aTag.href = blobUrl
-    aTag.setAttribute("download" , filename)
-    aTag.click()
-    aTag.remove()
-    })
-
-
-  }
-
 
   // Animation
   // const [text , setText] = useState("Web Developer  ")
@@ -67,7 +49,10 @@ end and back-end programming languages
           <div data-aos="fade-left" className='btnDiv my-2' >
             <div style={{marginTop:"50px"}} className="row ">
                 <div  className="col-sm-4 p-1  "> <Link to='/portfolio' > <button style={{backgroundColor:"white" , color:"black" , fontWeight:"800" , width:"110px"}} className='btn '>Portfolio</button></Link></div>
-                <div className="col-sm-4 p-1 "><button onClick={()=>{handleForResume(pngUrl)}} style={{backgroundColor:"white" , color:"black" , fontWeight:"800" , width:"110px"}} className='btn ' >Resume</button></div>
+                <div className="col-sm-4 p-1 "> <a href={pdf} download="Resume.pdf" ><button  style={{backgroundColor:"white" , color:"black" , fontWeight:"800" , width:"110px"}} className='btn ' >Resume</button></a> </div>
+
+
+                
                 <div  className="col-sm-4 p-1 "> <Link to='/contact' > <button style={{backgroundColor:"white" , color:"black" , fontWeight:"800" , width:"110px"}} className='btn '>Contact</button> </Link></div>
             </div>
           </div>

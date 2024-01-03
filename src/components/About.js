@@ -161,7 +161,7 @@ export default function About() {
 </div>
 
 
-{/* Text for frontend */}
+{/* Text for Backend */}
 
         <div style={{color:"white "}} className="col-md-5 py-5 px-2">
           
@@ -177,6 +177,29 @@ export default function About() {
 <hr className='my-3' style={{color:"white" , fontWeight:"900"}} />  
 </div>
 
+{/* ----------------Wxtra */}
+<div className="container  ">
+
+  <h1 style={{textAlign:"center"}} >Extras</h1>
+
+  <div className="row">
+    <div className="col-md-6 my-3">
+      <p  data-aos="fade-up" style={{color:"gray" , letterSpacing:"1px"}} >I excel in Git and GitHub, commanding fundamental and advanced Git operations. With GitHub, I adeptly manage repositories, lead collaborative workflows, and conduct impactful code reviews. My skills extend to resolving merge conflicts, ensuring codebase integrity and enabling seamless feature integration. Certified in Git fundamentals, I contribute to project success by enhancing code quality and fostering effective collaboration within development teams.</p>
+    </div>
+
+    <div style={{textAlign:"center"}} className="col-md-6  my-3">
+        <i class="fa-brands fa-git-alt fa-9x mx-5" style={{color: "#E94E31"}}></i>
+
+        <i class="fa-brands fa-github fa-9x mx-5" style={{color: "white"}}></i>
+    </div>
+  </div>
+</div>
+
+{/* --------------------------------------------------------- */}
+
+<div className='container'>
+<hr className='my-3' style={{color:"white" , fontWeight:"900"}} />  
+</div>
 
 <div style={{display:"flex" , justifyContent:"cebter" , textAlign:"center"}} className="container ">
     {/* Social media */}
@@ -201,10 +224,6 @@ export default function About() {
   </a>
 </div>
 </section>
-
-
-
-
 
 
 </div>

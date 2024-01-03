@@ -1,8 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Contact.css";
 import profile from "../happy-young-cute-illustration-face-profile-png-removebg-preview.png";
+import {useNavigate} from 'react-router-dom'
 
 export default function Contact() {
+
+  const [loading , setloading] = useState(false)
+
+  const navigate = useNavigate()
+
+  const initialState = {
+    name:'',
+    email:"",
+    contact:"",
+    service:"",
+    message:""
+  }
+  const [value , setValue] = useState(initialState)
+
+  const handleOnChange = (e)=>{
+    setValue({...value , [e.target.name]:e.target.value})
+  }
+
+  // HandleOnSUbmit
+  const handleOnSubmit = async(e)=>{
+    e.preventDefault()
+    console.log(value)
+
+    try {
+      setloading(true)
+    const data = await fetch('https://portfoliobackend-xzq9.onrender.com/AddUser' , {
+      method:"POST",
+      headers:{
+        "Content-type":"application/json"
+      },
+      body:JSON.stringify(value)   
+    })
+
+    const res = await data.json()
+    setloading(false)
+
+    if(res.status==="Success"){
+      navigate('/')
+    }
+
+    if(res.status==="ContactShort"){
+      alert(res.message)
+    }
+
+
+    } catch (error) {
+      console.log(error.message)
+      setloading(false)
+    }
+
+  }
+
   return (
     <>
       <div className="container my-2">
@@ -30,9 +83,9 @@ export default function Contact() {
               <label style={{color:"gray" , fontSize:"12px"}} className="contactLabel">Socials</label>
 
               <div style={{display:"flex"}} className="socialIcons my-2">
-              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i class="fa-solid fa-2xl fa-x"></i></a></p>
-              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i class="fa-brands fa-2xl fa-linkedin"></i></a></p>
-              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i class="fa-brands fa-2xl fa-github"></i></a></p>
+              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i className="fa-solid fa-2xl fa-x"></i></a></p>
+              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i className="fa-brands fa-2xl fa-linkedin"></i></a></p>
+              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i className="fa-brands fa-2xl fa-github"></i></a></p>
               </div>
             </div>
           </div>
@@ -46,7 +99,7 @@ export default function Contact() {
 
             {/* Form */}
             <div  className="FormBox">
-              <form action="/">
+              <form onSubmit={handleOnSubmit} method="POST" action="/AddUser">
                 <hr />
 
                 <div  className="Inputdiv">
@@ -54,8 +107,11 @@ export default function Contact() {
                   <br />
                   <input
                     className="Input"
-                    placeholder="Sachin Singh *"
+                    placeholder="Your Name here.."
                     type="text"
+                    name="name"
+                    onChange={handleOnChange}
+                    required
                   />
                 </div>
 
@@ -68,8 +124,11 @@ export default function Contact() {
                   <br />
                   <input
                     className="Input"
-                    placeholder="SachinSingh@gmail.com *"
+                    placeholder="Your Email here..."
                     type="email"
+                    name="email"
+                    onChange={handleOnChange}
+                    required
                   />
                 </div>
 
@@ -84,8 +143,11 @@ export default function Contact() {
                   <br />
                   <input
                     className="Input"
-                    placeholder="9874563210 *"
+                    placeholder="Your contact here..."
                     type="number"
+                    name="contact"
+                    onChange={handleOnChange}
+                    required
                   />
                 </div>
 
@@ -101,6 +163,9 @@ export default function Contact() {
                     className="Input"
                     placeholder="Web development , Web Design..."
                     type="text"
+                    name="service"
+                    onChange={handleOnChange}
+                    required
                   />
                 </div>
 
@@ -111,7 +176,10 @@ export default function Contact() {
                   <label className="nameLabel px-2">Your Message</label> <br />
                   <textarea
                     className="Input"
-                    placeholder="Hello Sachin, Can you help me with..."
+                    placeholder="Your message here ..."
+                    required
+                    name="message"
+                    onChange={handleOnChange}
                     rows="4"
                     style={{ resize: "none" }}
                   ></textarea>
@@ -120,7 +188,8 @@ export default function Contact() {
 
                 {/* Send Button */}
                 <div  className="sendBtnDiv text-center">
-                  <button className="sendIt">Send it</button>
+                  {loading ?  <i className="fa-solid fa-spinner fa-2x fa-spin" style={{color: "white"}}></i> :<button type="submit" className="sendIt">Send it</button> }
+                  
                 </div>
               </form>
             </div>

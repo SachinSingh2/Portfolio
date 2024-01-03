@@ -1,6 +1,6 @@
 import React from 'react'
 import '../css/Portfolio.css'
-import Blog from '../images/BlogImage.jpg'
+import Blog from '../images/BlogImage.png'
 import expresslogo from '../images/Express.png'
 import mongooseLogo from '../images/mongooselogo.png'
 import mongoDbLogo from '../images/Mongodblogo.png'
@@ -33,13 +33,14 @@ export default function Portfolio() {
 
       <div className="ProjectBoxInner p-2">
         {/* ScreenShotBox */}
-       <a target='blank' href="http://devloper.42web.io/"> <div className="ScreenShotBox  p-3 md-col-6">
+       <a target='blank' href="https://inspiring-hamster-3a1eee.netlify.app"> <div className="ScreenShotBox  p-3 md-col-6">
           {/* Content for ScreenShotBox */}
           <img width="100%" src={Blog} alt="" />
         </div></a>
 
 
-        {/* TechnologyBox */}
+        {/* TechnologyBox */} 
+        <a target='blank' href="https://inspiring-hamster-3a1eee.netlify.app">
         <div className="TechnologyBox  p-5">
           <div style={{textAlign:"center"}} ><h1>Technology Used</h1></div>
 
@@ -70,7 +71,7 @@ export default function Portfolio() {
         <img style={{width:"200px" , height:"100px"}} src={mongoDbLogo} alt="Mongodblogo" />
         </div>
 
-        </div>
+        </div> </a>
 
 
 
@@ -138,13 +139,14 @@ Beyond that, it keeps you in the loop with the latest releases and upcoming
 
       <div className="ProjectBoxInner p-2">
         {/* ScreenShotBox */}
-       <a target='blank' href="http://devloper.42web.io/"> <div className="ScreenShotBox  p-3 md-col-6">
+       <a target='blank' href="https://glowing-sunburst-6ac00e.netlify.app"> <div className="ScreenShotBox  p-3 md-col-6">
           {/* Content for ScreenShotBox */}
           <img width="100%" src={MovieApp} alt="" />
         </div></a>
 
 
         {/* TechnologyBox */}
+        <a href="https://glowing-sunburst-6ac00e.netlify.app" target='blank' >
         <div className="TechnologyBox  p-5">
           <div style={{textAlign:"center"}} ><h1>Technology Used</h1></div>
 
@@ -167,7 +169,7 @@ Beyond that, it keeps you in the loop with the latest releases and upcoming
 
 {/* A little text about this app */}
 <p>This app is created on Frontend with the power of react-redux . For desginign we have used Bootstrap and mdb Bootstrap . To fetch the movies we have used an API which is helping us to get the infomration about out favourite movies.</p>
-        </div>
+        </div> </a>
 
 
 
