@@ -12,7 +12,7 @@ useEffect(()=>{
   const getUsers = async()=>{
     const token = sessionStorage.getItem('token')
     setloading(true)
-    const data = await fetch('https://portfoliobackend-xzq9.onrender.com/GetAllUser' , {
+    const data = await fetch('https://portfolioserver-tosr.onrender.com/GetAllUser' , {
       method:"GET",
       headers:{
         authorization : token
@@ -33,7 +33,7 @@ useEffect(()=>{
 const handleOnFilter = async(by)=>{
   const token = sessionStorage.getItem('token')
   setloading(true)
-  const data = await fetch(`https://portfoliobackend-xzq9.onrender.com/FilterData/${by}` , {
+  const data = await fetch(`https://portfolioserver-tosr.onrender.com/FilterData/${by}` , {
     method:"GET",
     headers:{
       authorization : token
@@ -53,7 +53,7 @@ const handleOnDelete = async(id)=>{
   try {
     const token = sessionStorage.getItem('token')
     console.log(id)
-    const data =await fetch(`https://portfoliobackend-xzq9.onrender.com/DeleteUser/${id}` , {
+    const data =await fetch(`https://portfolioserver-tosr.onrender.com/DeleteUser/${id}` , {
       method:"DELETE",
       headers:{
         authorization : token

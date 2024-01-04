@@ -29,7 +29,7 @@ export default function Contact() {
 
     try {
       setloading(true)
-    const data = await fetch('https://portfoliobackend-xzq9.onrender.com/AddUser' , {
+    const data = await fetch('https://portfolioserver-tosr.onrender.com/AddUser' , {
       method:"POST",
       headers:{
         "Content-type":"application/json"

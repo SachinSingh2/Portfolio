@@ -30,6 +30,11 @@ export default function NavBar() {
         <li className="nav-item">
           <Link style={{color: "white"}} className="nav-link active" aria-current="page" to="/contact"><span data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >Contact</span></Link>
         </li>
+
+        <li className="nav-item">
+          <Link style={{color: "white"}} className="nav-link active" aria-current="page" to="/Admin"><span data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >Admin</span></Link>
+        </li>
+
       </ul>
     </div>
   </div>
