@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../css/Contact.css";
-// import profile from "../happy-young-cute-illustration-face-profile-png-removebg-preview.png";
 import profile from '../images/profile.png'
 import {useNavigate} from 'react-router-dom'
 
