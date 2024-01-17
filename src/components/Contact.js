@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/Contact.css";
-import profile from "../happy-young-cute-illustration-face-profile-png-removebg-preview.png";
+// import profile from "../happy-young-cute-illustration-face-profile-png-removebg-preview.png";
+import profile from '../images/profile.png'
 import {useNavigate} from 'react-router-dom'
 
 export default function Contact() {
@@ -69,7 +70,7 @@ export default function Contact() {
             <div  className="contactDetailDiv">
               <label style={{color:"gray" , fontSize:"12px"}} className="contactLabel">CONTACT DETAIL</label>
               <p>ss0985211@gmail.com</p>
-              <p>9821628507</p>
+              <p> <span>+91</span> 9821628507</p>
             </div>
 
             {/* Business Deatil */}
@@ -83,9 +84,9 @@ export default function Contact() {
               <label style={{color:"gray" , fontSize:"12px"}} className="contactLabel">Socials</label>
 
               <div style={{display:"flex"}} className="socialIcons my-2">
-              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i className="fa-solid fa-2xl fa-x"></i></a></p>
-              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i className="fa-brands fa-2xl fa-linkedin"></i></a></p>
-              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="/"><i className="fa-brands fa-2xl fa-github"></i></a></p>
+              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="https://twitter.com/home?lang=en"><i className="fa-solid fa-2xl fa-x"></i></a></p>
+              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="https://www.linkedin.com/in/sachin-singh-51b973245"><i className="fa-brands fa-2xl fa-linkedin"></i></a></p>
+              <p><a style={{textDecoration:"none" , color:"white" , fontSize:"15px"}} className="mx-3" href="https://github.com/SachinSingh2"><i className="fa-brands fa-2xl fa-github"></i></a></p>
               </div>
             </div>
           </div>
@@ -197,21 +198,6 @@ export default function Contact() {
             {/* Social Media */}
             <section className="d-flex justify-content-center justify-content-lg-between p-4  ">
               <div  className="text-center">
-                <a 
-                  style={{ fontSize: "24px" }}
-                  href="/"
-                  className="me-4 text-reset"
-                >
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a
-                  style={{ fontSize: "24px" }}
-                  href="/"
-                  className="me-4 text-reset"
-                >
-                  <i className="fab fa-twitter"></i>
-                </a>
-
                 <a
                   style={{ fontSize: "24px" }}
                   href="https://instagram.com/sachin_singh981?igshid=OGQ5ZDc2ODk2ZA=="

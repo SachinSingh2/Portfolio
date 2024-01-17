@@ -26,7 +26,7 @@ export default function Home2() {
 
           <div data-aos="fade-left" className="col-md-6 order-md-1  p-5">
 
-            <div  ><span style={{fontSize:"25px"}} >✌️</span> There! I am Sachin Singh</div>
+            <div  ><span style={{fontSize:"25px"}} >Hi</span> There! I am Sachin Singh</div>
 
 
             {/* Main Head */}

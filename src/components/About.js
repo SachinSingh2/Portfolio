@@ -206,12 +206,6 @@ export default function About() {
    <section className="d-flex justify-content-center justify-content-lg-between p-4  ">
 
 <div   className='text-center'>
-  <a style={{fontSize:"15px"}} href="/" className="me-4 text-reset">
-    <i style={{color:"white"}} className="fab fa-facebook-f fa-2x"></i>
-  </a>
-  <a style={{fontSize:"15px"}} href="/" className="me-4 text-reset">
-    <i style={{color:"white"}} className="fab fa-twitter fa-2x"></i>
-  </a>
 
   <a style={{fontSize:"15px"}} href="https://instagram.com/sachin_singh981?igshid=OGQ5ZDc2ODk2ZA==" className="me-4 text-reset">
     <i style={{color:"white"}} className="fab fa-instagram fa-2x"></i>
